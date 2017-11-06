@@ -1,3 +1,14 @@
+a:hover{
+text-decoration: none;
+}
+
+
+img{
+display: block;
+    max-width: 100%; 
+    border-radius: 5px;
+}
+
 
 .navbar-brand{
     background: #000;
@@ -21,4 +32,43 @@ border-radius: 3px;
 
 .side-bar .list-group-item.active{
 background-color: black;
+}
+
+.news-list-item{
+padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-list-item:first-child{
+padding-top: 0;
+}
+
+
+.news-list-item .title{
+    display: block;
+    color: #444;
+font-size: 18px;
+font-weight: bold;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.news-list-item .title:hover{
+color: red;
+}
+
+.news-list-item .info{
+color:#888;
+}
+
+.avatar{
+display: inline-block;
+}
+
+.avatar img{
+display: inline-block;
+width: 15px;
+    height: 15px;
+    margin-left: 5px;
 }
