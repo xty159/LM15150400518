@@ -149,10 +149,19 @@ margin-top: 20px;
     color: #999;
 }
 
+.container-small{
+max-width: 500px;
+}
 
+.btn-primary{
+background-color: red;
+    border-color: firebrick;
+}
 
-
-
+.btn-primary:hover{
+background-color: #b10505;
+    border-color: #b10505;
+}
 
 
 
