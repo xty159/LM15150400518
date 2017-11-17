@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>dataiyang</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.js"></script>
+    <![ednif]-->
+    <style>
+        body{
+            color: #5a5a5a;
+        }
+        /*广告轮播*/
+        .carousel{
+            height: 600px;
+            margin-bottom: 60px;
+        }
+        .carousel .item{
+            height: 800px;
+            background-color: #000;
+        }
+        .carousel .item img{
+            width: 100%;
+        }
+        .carousel-caption{
+            z-index: 10;
+        }
+        .carousel-caption p{
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        /*简介*/
+        .summary{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .summary .col-md-4{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+   <!--广告轮播-->
+   <div id="ad-carousel" class="carousel slide" data-ride="carousel">
+       <ol class="carousel-indicators">
+           <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+           <li data-target="#ad-carousel" data-slide-to="1"></li>
+           <li data-target="#ad-carousel" data-slide-to="2"></li>
+           <li data-target="#ad-carousel" data-slide-to="3"></li>
+           <li data-target="#ad-carousel" data-slide-to="4"></li>
+       </ol>
+       <div class="carousel-inner">
+           <div class="item active">
+               <img src="./img/1.jpg" alt="1 slide">
+               <div class="container">
+                   <div class="carousel-caption">
+                       <h1>祝好运~</h1>
+                       <p>May everyone be happy </p>
+                       <p><a class="btn btn-lg btn-primary" href="index.html" role="button" target="_blank">点我回到首页</a></p>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+                <img src="./img/2.jpg" alt="2 slide">
+                <div class="container">
+                   <div class="carousel-caption">
+                       <h1><font color="000000">世纪广场流浪猫</font></h1>
+                       <p><font color="000000">解救时间17/6/24</font></p>
+                       <p><a class="btn btn-lg btn-primary" href="index.html" role="button" target="_blank">点我回到首页</a></p>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+                <img src="./img/3.jpg" alt="3 slide">
+                <div class="container">
+                   <div class="carousel-caption">
+                       <h1><font color="000000">廊口中心流浪猫</font></h1>
+                       <p><font color="000000">解救时间17/8/31</font></p>
+                       <p><a class="btn btn-lg btn-primary" href="index.html" role="button" target="_blank">点我回到首页</a></p>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+                <img src="./img/4.jpg" alt="4 slide">
+                <div class="container">
+                   <div class="carousel-caption">
+                       <h1>市一中流浪猫</h1>
+                       <p>解救时间17/9/3 </p>
+                       <p><a class="btn btn-lg btn-primary" href="index.html" role="button" target="_blank">点我回到首页</a></p>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+                <img src="./img/5.jpg" alt="5 slide">
+                <div class="container">
+                   <div class="carousel-caption">
+                       <h1><font color="000000">东软小学流浪猫</font></h1>
+                       <p>解救时间17/6/25</p>
+                       <p><a class="btn btn-lg btn-primary" href="index.html" role="button" target="_blank">点我回到首页</a></p>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+                <img src="./img/6.jpg" alt="5 slide">
+                <div class="container">
+                   <div class="carousel-caption">
+                       <h1>星辰小区流浪猫</h1>
+                       <p>解救时间16/5/10 </p>
+                       <p><a class="btn btn-lg btn-primary" href="index.html" role="button" target="_blank">点我回到首页</a></p>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+                <img src="./img/7.jpg" alt="5 slide">
+                <div class="container">
+                   <div class="carousel-caption">
+                       <h1>花园小区流浪猫</h1>
+                       <p>解救时间17/4/8 </p>
+                       <p><a class="btn btn-lg btn-primary" href="index.html" role="button" target="_blank">点我回到首页</a></p>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <a href="#ad-carousel" data-slide="prev" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>
+         <a href="#ad-carousel" data-slide="next" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+   </div>
+
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+       $(function(){
+           $('#ad-carousel').carousel();
+           $('#menu-nav .navbar-collapse a').click(function(e){
+               var href = $(this).attr('href');
+               var tabId = $(this).attr('data-tab');
+               if('#'!==href){
+                   e.preventDefault();
+                   $(document).scrollTop($(href).offset().top - 70);
+                   if(tabId){
+                       $('#feature-tab a[href=#'+tabId +']').tab('show');
+                   }
+               }
+           })
+       })
+    </script>
+</body>
+</html>
